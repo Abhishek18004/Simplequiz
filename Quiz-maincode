@@ -1,0 +1,178 @@
+"""School Group project"""
+
+#password generator
+import random
+a=input("Enter a username: ")
+lower="abcdefghijklmnopqrstuvwxyz"
+upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+numbers="0123456789"
+symbols=" _@%$!"
+passwrd=lower+upper+numbers+symbols
+length=6
+password="".join(random.sample(passwrd,length))
+print("Password: ", password)
+
+#logging in
+print("Relogin to CONFIRM!")
+print("---:---:---:---:---")
+n=1
+while n>0:
+    b=input("Enter username: ")
+    c=input("Enter password: ")
+    if b==a and c==password:
+        print("Login Successful!!")
+        n=0
+    else:
+        print("Invalid Credentials")
+        print("---:---:---:---:---")
+        print("Please try again")
+
+                                #QUESTIONS
+print('''\033[1;31;47m
+Greetings! 
+Your revision test for COMPUTER SCIENCE examination is going to begin. Read the following instructions before you begin.
+
+
+INSTRUCTIONS:
+      1. Read all the questions properly.
+      2. All the questions are compulsory.
+      3. There are 15 questions in all, each carry 1 mark.
+      4. The questions from 1 to 5 are MCQs.
+      5. The questions from 6 to 10 are FIBs.
+      6. The questions from 11 to 15 are True or False Questions.
+      
+YOU MAY NOW BEGIN YOUR EXAM
+ALL THE BEST!!!!\n''')
+
+count=0
+#MCQs
+ 
+print('''\033[0m
+Multiple Choice Questions:''')
+#Q1
+print('''1. Which of these is not a type of virus? 
+   A) Boot sector 
+   B) Multiparite 
+   C) Polymorphic
+   D) Trojans''')
+d1=input("Choose the correct option: ")
+if d1.upper()=='TROJANS' or d1.upper()=='D':
+    count+=1
+#Q2
+print('''2. In mid 1981, the first computer virus for Apple computers came into existence. It is:
+   A) Apple I 
+   B) Apple II
+   C) Apple III
+   D) Apple virus''')
+e1=input("Choose the correct option: ")
+if e1.upper()=='APPLE II' or e1.upper()=='B':
+    count+=1
+#Q3
+print('''3. Which of the below-mentioned reasons do not satisfy the reason why people create a computer virus?
+    
+
+    a) Research purpose
+    b) Pranks
+    c) Identity theft
+    d) Protection''')
+f1=input("Choose the correct option: ")
+if f1.upper()=='PROTECTION' or f1.upper()=='D':
+    count+=1
+#Q4
+print('''4. Which of the following is an Anti-virus program ? 
+    A) k7
+    B) Norton 
+    C) eScan
+    D) All of the above''')
+g1=input("Choose the correct option: ")
+if g1.upper()=='ALL OF THE ABOVE' or g1.upper()=='D':
+    count+=1
+#Q5
+print('''5. What is a keylogger?
+      A)Firmware
+      B)Antivirus
+      C)Spyware
+      D)All of these      ''')
+h1=input("Choose the correct option: ")
+if h1.upper()=='SPYWARE' or h1.upper()=='C':
+    count+=1
+
+#FIBs
+
+print('''
+Fill In The Blanks: ''')
+#Q1
+print("1. _______ monitors user activity on internet and transmits that information in the background to someone else ")
+d2=input("Enter your answer: ")
+if d2.upper()=='SPYWARE':
+    count+=1
+#Q2
+print("2. Viruses are created by ____")
+
+
+e2=input("Enter your answer: ")
+if e2.upper()=='HUMANS' or e2.upper()=='HUMAN':
+    count+=1
+#Q3
+print("3. ______ means no price is to be paid for the software.")
+f2=input("Enter your answer: ")
+if f2.upper()=='FREEWARE':
+    count+=1
+#Q4
+print("4. The _______ are small text files storing small piece of information related to your online use and habits")
+g2=input("Enter your answer: ")
+if g2.upper()=='COOKIE' or g2.upper()=='COOKIES':
+    count+=1
+#Q5
+print("5.  _____ is stealing someone else's intellectual work and representing it as your own without giving credit.")
+h2=input("Enter your answer: ")
+if h2.upper()=='PLAGIARISM':
+    count+=1
+
+#True-false Questions
+
+print('''
+True or False Questions: ''')
+#Q1
+print("1. Private Browsing ensures that cookies are not saved.")
+d3=input("True or False?: ")
+if d3.upper()=='TRUE':
+    count+=1
+#Q2
+print("2. Hacking a computer is always illegal and punishable by law. ")
+e3=input("True or False?: ")
+if e3.upper()=='FALSE':
+    count+=1
+#Q3
+print("3. Adware is harmless when money is paid.")
+f3=input("True or False?: ")
+
+
+if f3.upper()=='FALSE':
+    count+=1
+#Q4
+print("4. Open source software can be used for commercial purposes.")
+g3=input("True or False?: ")
+if g3.upper()=='TRUE':
+    count+=1
+#Q5
+print("5. Freeware is copyrighted software that is freely available to use.")
+h3=input("True or False?: ")
+if h3.upper()=='TRUE':
+    count+=1
+
+print('''
+ 
+You have Successfully completed your exam.''')
+print('''Out of 15 you have scored: ''', count,"marks." )
+
+print('''GOOD LUCK ON YOUR FINAL EXAM''')
+
+
+
+"""
+Credits: 
+Abhishek Karthik
+V. Ashish
+Bheema Reddy
+"""
